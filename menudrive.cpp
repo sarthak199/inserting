@@ -9,9 +9,11 @@ int main()
   {
     cin>>a[i];
   }
- 
-
-  cout<<"enter the choice"<<endl;
+cout<<"enter 1 to output"<<endl; 
+	cout<<"enter 2 to insertion"<<endl;
+	cout<<"enter 3 to deletion"<<endl;
+	cout<<"enter 4  to search the element"<<endl;
+cout<<"enter the choice"<<endl;
   cin>>e;
   
   switch(e)
