@@ -1,28 +1,31 @@
-#include <iostream>
-using namespace std;
-
-int main()
+#include<iostream.h>
+#include<conio.h>
+void main()
 {
-  int a[50],e,n,i;
-    cout<<"enter the no of  element you want to enter "<<endl;
-  cin>>n;
-  cout<<"enter the element in array"<<endl;
-  for(i=0;i<=n;i++)
-  {
-    cin>>a[i];
-  }
-cout<<"array before inserting "<<endl;
-  for(int i;i<n;i++)
-  {
-  cout<<a[i];
-  }
-  cout <<"inserting the array of index 2"<<endl;
-  cin>>a[2];
-  cout<<"array after inserting "<<endl;
-  for(int i;i<n;i++)
-  {
-  cout<<a[i];
-  }
-  
-return 0;
+	clrscr();
+	int arr[50], size, insert, i, pos;
+	cout<<"Enter Array Size : ";
+	cin>>size;
+	cout<<"Enter array elements : ";
+	for(i=0; i<size; i++)
+	{
+		cin>>arr[i];
+	}
+	cout<<"Enter element to be insert : ";
+	cin>>insert;
+	cout<<"At which position (Enter index number) ? ";
+	cin>>pos;
+	// now create a space at the required position
+	for(i=size; i>pos; i--)
+	{
+		arr[i]=arr[i-1];
+	}
+	arr[pos]=insert;
+	cout<<"Element inserted successfully..!!\n";
+	cout<<"Now the new array is : \n";
+	for(i=0; i<size+1; i++)
+	{
+		cout<<arr[i]<<" ";
+	}
+	getch();
 }
